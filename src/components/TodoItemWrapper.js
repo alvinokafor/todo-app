@@ -3,14 +3,16 @@ import TodoItem from "./TodoItem";
 import TodoInfo from "./TodoInfo";
 import "../assets/styles/TodoItemWrapper.css";
 
-const TodoItemWrapper = ({todos}) => {
+const TodoItemWrapper = ({todos, setTodos}) => {
 
   return (
     <section className="todo-item-wrapper">
       {todos.map((todo) => (
         <TodoItem 
+        todos={todos}
         todo={todo} 
         key={todo.id}
+        setTodos={setTodos}
         // editHandler={props.editHandler} 
         // title={todo.title} 
         />

@@ -24,7 +24,7 @@ const DUMMY_DATA = [
 const App = () => {
 const [inputText, setInputText] = useState('')
 const [todos, setTodos] = useState(DUMMY_DATA)
-// console.log(todos)
+
 
   return (
     <main className="main-container">
@@ -39,8 +39,8 @@ const [todos, setTodos] = useState(DUMMY_DATA)
           setTodos={setTodos}
         />
         <TodoItemWrapper
-          setTodo={setTodos}
           todos={todos}
+          setTodos={setTodos}
           // setFilterState={setFilterState}
           // filterState={filterState}
         />

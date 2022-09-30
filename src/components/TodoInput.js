@@ -22,6 +22,8 @@ const submitHandler = (e) => {
       }, ...prev
     ]
   })
+
+  e.target.elements.todoTitle.value = ''
 }
 
 
