@@ -1,0 +1,12 @@
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}   
+
+.todo-header h1 {
+    color: white;
+    letter-spacing: 18px;
+    font-weight: 700;
+    font-size: 30px;
+}

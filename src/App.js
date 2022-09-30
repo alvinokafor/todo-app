@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header"
+import TodoHeader from "./components/TodoHeader";
+import TodoWrapper from "./components/TodoWrapper";
+import TodoInput from "./components/TodoInput";
+import { v4 as uuidv4 } from "uuid";
+import TodoItemWrapper from "./components/TodoItemWrapper";
+import "./index.css";
 
-function App() {
+const DUMMY_DATA = [
+  {
+    id: uuidv4(),
+    title: "go to the gym",
+    complete: false,
+  },
+
+  {
+    id: uuidv4(),
+    title: "eat some food",
+    complete: false,
+  },
+];
+
+const App = () => {
+const [inputText, setInputText] = useState('')
+const [todos, setTodos] = useState(DUMMY_DATA)
+// console.log(todos)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main-container">
+
+      <Header />
+
+      <TodoWrapper>
+        <TodoHeader />
+        <TodoInput 
+          inputText={inputText}
+          setInputText={setInputText}
+          setTodos={setTodos}
+        />
+        <TodoItemWrapper
+          setTodo={setTodos}
+          todos={todos}
+          // setFilterState={setFilterState}
+          // filterState={filterState}
+        />
+      </TodoWrapper>
+    </main>
   );
 }
 

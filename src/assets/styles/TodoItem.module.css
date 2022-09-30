@@ -1,0 +1,84 @@
+.todo-items {
+  cursor: pointer;
+  display: flex;
+  height: 65px;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  background-color: hsl(235, 24%, 19%);
+  transition: all 0.2s ease-in;
+}
+
+.todo-items:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 32px 50px -3px rgba(0, 0, 0, 0.1);
+  border-color: hsl(235, 24%, 19%);
+}
+
+.todo-items:first-of-type {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.todo-checkbox {
+  width: 65px;
+}
+
+.todo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:  hsl(234, 39%, 85%);
+}
+
+.todo-completed {
+  color: hsla(234, 39%, 85%, 0.116)
+}
+
+
+.todo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-checkbox input {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 26px;
+  width: 26px;
+  border: 1px solid hsla(234, 39%, 85%, 0.651);
+  border-radius: 50%;
+  margin-top: -4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkLabel {
+  height: 26px;
+  width: 26px;
+  border: 1px solid hsla(234, 39%, 85%, 0.651);
+  border-radius: 50%;
+  margin-top: -4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.checkLabel:hover {
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+} */
+
+.todo-checkbox:checked {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+
+.todo-checkbox:checked::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='9'%3E%3Cpath fill='none' stroke='%23FFF' stroke-width='2' d='M1 4.304L3.696 7l6-6'/%3E%3C/svg%3E");
+  color: #fff;
+}

@@ -1,0 +1,22 @@
+.todo-input-container {
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 6px;
+    margin-top: 50px;
+}
+
+.todo-input-container form{
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-todo {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding-inline: 24px;
+}
