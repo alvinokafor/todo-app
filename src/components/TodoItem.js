@@ -33,7 +33,7 @@ const TodoItem = ({todos, todo, setTodos}) => {
       <label
         htmlFor="checkbox"
         className={`${styles["todo-title"]} 
-        ${todo.isComplete && styles["todo-completed"]}
+        ${todo.complete && styles["todo-completed"]}
         `}
       >
         {todo.title}

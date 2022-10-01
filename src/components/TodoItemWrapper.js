@@ -3,22 +3,24 @@ import TodoItem from "./TodoItem";
 import TodoInfo from "./TodoInfo";
 import "../assets/styles/TodoItemWrapper.css";
 
-const TodoItemWrapper = ({todos, setTodos}) => {
+const TodoItemWrapper = ({todos, setTodos, setStatus, filteredTodos}) => {
 
   return (
     <section className="todo-item-wrapper">
-      {todos.map((todo) => (
+      {filteredTodos.map((todo) => (
         <TodoItem 
         todos={todos}
         todo={todo} 
         key={todo.id}
         setTodos={setTodos}
-        // editHandler={props.editHandler} 
-        // title={todo.title} 
         />
       ))}
 
-      <TodoInfo />
+      <TodoInfo 
+        todos={todos}
+        setTodos={setTodos}
+        setStatus={setStatus}
+      />
     </section>
   );
 };

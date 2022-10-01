@@ -1,16 +1,43 @@
 import React from "react";
 import "../assets/styles/TodoInfo.css";
 
-const TodoInfo = () => {
+const TodoInfo = ({todos, setTodos, setStatus}) => {
+
+  //filters out todo items that are not completed
+  const deleteHandler = () => {
+    setTodos(todos.filter(item => {
+      return item.complete !== true
+    }))
+  }
+
+  const allHandler = (e) => {
+    setStatus(e.target.textContent)
+  }
+
+  const completeHandler = (e) => {
+    setStatus(e.target.textContent)
+  }
+
+  const activeHandler = (e) => {
+    setStatus(e.target.textContent)
+  }
+
   return (
     <div className="todo-info-container">
       <p className="items-left">5 items left</p>
       <div className="status">
-        <button>All</button>
-        <button>Active</button>
-        <button>Completed</button>
+        <span
+        onClick={allHandler}
+        >All</span>
+        <span
+        onClick={activeHandler}
+        >Active</span>
+        <span
+        onClick={completeHandler}>Completed</span>
       </div>
-      <p className="clear-items">Clear Completed</p>
+      <p 
+      onClick={deleteHandler}
+      className="clear-items">Clear Completed</p>
     </div>
   );
 };
