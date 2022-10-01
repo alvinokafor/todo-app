@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/styles/TodoInfo.css";
 
-const TodoInfo = ({todos, setTodos, setStatus}) => {
+const TodoInfo = ({todos, setTodos, setStatus, itemsLeft}) => {
 
   //filters out todo items that are not completed
   const deleteHandler = () => {
@@ -24,7 +24,7 @@ const TodoInfo = ({todos, setTodos, setStatus}) => {
 
   return (
     <div className="todo-info-container">
-      <p className="items-left">5 items left</p>
+      <p className="items-left">{`${itemsLeft.length} item (s) left`}</p>
       <div className="status">
         <span
         onClick={allHandler}

@@ -27,7 +27,7 @@ const TodoItem = ({todos, todo, setTodos}) => {
           id="checkbox"
           type="checkbox"
           // name={styles["todoCheck"]}
-          className={styles["todo-checkbox"]}
+          className={`${styles["todo-checkbox"]}`}
         />
       </div>
       <label

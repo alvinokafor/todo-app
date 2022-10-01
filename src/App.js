@@ -46,6 +46,11 @@ const App = () => {
     }
   };
 
+  //gets unccompleted items
+  let itemsLeft = todos.filter(todo => {
+    return todo.complete === false
+  })
+
   return (
     <main className="main-container">
       <Header />
@@ -62,6 +67,7 @@ const App = () => {
           setTodos={setTodos}
           setStatus={setStatus}
           filteredTodos={filteredTodos}
+          itemsLeft={itemsLeft}
           // status={status}
           // setFilterState={setFilterState}
           // filterState={filterState}

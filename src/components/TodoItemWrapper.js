@@ -3,7 +3,7 @@ import TodoItem from "./TodoItem";
 import TodoInfo from "./TodoInfo";
 import "../assets/styles/TodoItemWrapper.css";
 
-const TodoItemWrapper = ({todos, setTodos, setStatus, filteredTodos}) => {
+const TodoItemWrapper = ({todos, setTodos, setStatus, filteredTodos, itemsLeft}) => {
 
   return (
     <section className="todo-item-wrapper">
@@ -17,6 +17,7 @@ const TodoItemWrapper = ({todos, setTodos, setStatus, filteredTodos}) => {
       ))}
 
       <TodoInfo 
+        itemsLeft={itemsLeft}
         todos={todos}
         setTodos={setTodos}
         setStatus={setStatus}
