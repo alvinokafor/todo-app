@@ -7,20 +7,6 @@ import TodoInput from "./components/TodoInput";
 import TodoItemWrapper from "./components/TodoItemWrapper";
 import "./index.css";
 
-// const DUMMY_DATA = [
-//   {
-//     id: uuidv4(),
-//     title: "go to the gym",
-//     complete: false,
-//   },
-
-//   {
-//     id: uuidv4(),
-//     title: "eat some food",
-//     complete: false,
-//   },
-// ];
-
 const App = () => {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
